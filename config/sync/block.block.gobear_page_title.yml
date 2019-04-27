@@ -1,0 +1,20 @@
+uuid: 201b4b16-a0b7-46d7-9c1e-dc13ac12a613
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gobear
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: gobear_page_title
+theme: gobear
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

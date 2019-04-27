@@ -602,6 +602,15 @@ function gobear_theme($existing, $type, $theme, $path) {
       'render element' => 'form',
       'path' => drupal_get_path('module', 'gobear'),
     ],
+    'gobear_job_listing' => [
+      'variables' => [
+        'items' => NULL,
+      ]
+    ],
   ];
   return $info;
+}
+
+function gobear_preprocess_gobear_job_listing(&$variables) {
+
 }

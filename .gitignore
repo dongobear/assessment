@@ -6,6 +6,7 @@
 /web/core/
 /web/modules/contrib/
 /web/themes/contrib/
+/web/themes/custom/gobear/.sass-cache/
 /web/profiles/contrib/
 /web/libraries/
 

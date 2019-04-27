@@ -1,0 +1,20 @@
+uuid: 7e5a2fd8-be6d-415c-88bd-8a718472b9e3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gobear
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: gobear_local_actions
+theme: gobear
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

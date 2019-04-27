@@ -4,6 +4,7 @@ namespace Drupal\gobear_jobs\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Component\Utility\Xss;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 /**
  * Class JobController.
@@ -18,34 +19,32 @@ class JobController extends ControllerBase {
   public function build() {
     $data = file_get_contents('https://jobs.github.com/positions.json?location=new+york');
 
-    $rows = [];
+    $items = [];
     if ($jobs = json_decode($data, TRUE)) {
+      //shuffle($jobs);
+      /** @var \Drupal\Core\Datetime\DateFormatterInterface $date_formatter */
+      $date_formatter = \Drupal::service('date.formatter');
       foreach ($jobs as $job) {
-        $rows[] = [
-          Xss::filter($job['title']),
-          Xss::filter($job['company']),
-          Xss::filter($job['location']),
-          Xss::filter($job['type']),
-          Xss::filter($job['created_at']),
+        //$created_at = DrupalDateTime::createFromFormat($job['created_at'], 'D M d H:i:s UTC Y');
+        $created_at = new DrupalDateTime($job['created_at'], 'UTC');
+        $items[] = [
+          'id' => Xss::filter($job['id']),
+          'title' => Xss::filter($job['title']),
+          'url' => Xss::filter($job['url']),
+          'company' => Xss::filter($job['company']),
+          'company_url' => Xss::filter($job['company_url']),
+          'location' => Xss::filter($job['location']),
+          'type' => Xss::filter($job['type']),
+          'created_at' => $date_formatter->formatTimeDiffSince($created_at->getTimestamp()),
           'description' => [
-            'data' => [
-              '#markup' => Xss::filter($job['description']),
-            ],
-          ]
+            '#markup' => Xss::filter($job['description']),
+          ],
         ];
       }
     }
     return [
-      '#type' => 'table',
-      '#header' => [
-        $this->t('Title'),
-        $this->t('Company'),
-        $this->t('Location'),
-        $this->t('Type'),
-        $this->t('Created at'),
-        $this->t('Description'),
-      ],
-      '#rows' => $rows,
+      '#theme' => 'gobear_job_listing',
+      '#items' => $items,
     ];
   }
 
