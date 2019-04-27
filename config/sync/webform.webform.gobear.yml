@@ -12,14 +12,14 @@ id: gobear
 title: GoBear
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last name'\ngender:\n  '#type': radios\n  '#title': Gender\n  '#options':\n    male: Male\n    female: Female\nemail_address:\n  '#type': email\n  '#title': 'Email address'\nage:\n  '#type': hidden\n  '#title': Age\n  '#default_value': '[current-page:query:age]'\ncity:\n  '#type': hidden\n  '#title': City\n  '#default_value': '[current-page:query:city]'"
+elements: "first_name:\n  '#type': textfield\n  '#title': 'First name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last name'\ngender:\n  '#type': radios\n  '#title': Gender\n  '#options':\n    male: Male\n    female: Female\nemail_address:\n  '#type': email\n  '#title': 'Email address'\nage:\n  '#type': hidden\n  '#title': Age\n  '#prepopulate': true\ncity:\n  '#type': hidden\n  '#title': City\n  '#prepopulate': true"
 css: ''
 javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
   page: true
-  page_submit_path: ''
+  page_submit_path: assessment-form
   page_confirm_path: ''
   form_title: both
   form_submit_once: false
