@@ -1,0 +1,22 @@
+uuid: 4adea4dc-1849-4344-b535-b6ad3b7b057e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gobear
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: gobear_content
+theme: gobear
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

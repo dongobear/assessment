@@ -1,0 +1,14 @@
+uuid: 993cd8dd-19b6-47b6-b115-cd9b6740b35b
+name: GoBear
+mail: phudt90@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /jobs
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

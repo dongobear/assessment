@@ -1,0 +1,36 @@
+{% if items %}
+<div class="gobear-job-listing">
+  {% for item in items %}
+  <div class="gobear-job-listing__item">
+    <div class="gobear-job-listing__item-body">
+      <h3 class="gobear-job-listing__item-title">{{ item.title }}</h3>
+      <div class="gobear-job-listing__item-meta">
+        <span><a href="{{ item.company_url }}">{{ item.company }}</a></span>
+        <span>{{ item.location }}</span>
+      </div>
+      <div class="gobear-job-listing__item-meta">
+        <span>{{ 'Published'|t }} {{ item.created_at }}</span>
+        <span>{{ item.type }}</span>
+      </div>
+      <div>
+        <a role="button"
+           data-toggle="collapse"
+           href="#collapse-{{ item.id }}"
+           aria-expanded="false"
+           aria-controls="collapse-{{ item.id }}">
+          {{ 'More info'|t }} >
+        </a>
+        <div class="collapse" id="collapse-{{ item.id }}">
+          <div class="gobear-job-listing__description">
+            {{ item.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gobear-job-listing__item-actions">
+      <a href="{{ item.url }}" class="btn btn-success">{{ item.type }}</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
