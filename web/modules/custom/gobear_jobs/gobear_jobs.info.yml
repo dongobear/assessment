@@ -1,0 +1,5 @@
+name: GoBear Jobs
+type: module
+description: GoBear Jobs listing
+core: 8.x
+package: GoBear

@@ -1,0 +1,8 @@
+
+gobear_jobs.job_controller_build:
+  path: '/jobs'
+  defaults:
+    _controller: '\Drupal\gobear_jobs\Controller\JobController::build'
+    _title: 'Jobs listing'
+  requirements:
+    _permission: 'access content'
