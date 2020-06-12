@@ -1,0 +1,10 @@
+name: gobear
+type: theme
+base theme: false
+core: 8.x
+libraries:
+  - gobear/global-styling-and-scripts
+regions:
+    header: 'Header'
+    content: 'Content'
+    footer: 'Footer'
