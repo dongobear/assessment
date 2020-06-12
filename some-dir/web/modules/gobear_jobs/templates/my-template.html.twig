@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="list-job">
+        {% for job in listJobs %}
+        <div class="item-job">
+            <h2>{{ job.title }}</h2>
+            <div class="name"><a href="#">{{ job.company }}</a> | {{ job.location }}</div>
+            <div class="name"><span>{{ job.created_at }}<span> | Team </div>
+                        
+            <div class="information">
+                <a href="#" class="btn-more-info">More info ></a>
+                <a href="#" class="btn-less-info hidden">Less info ></a>
+                <div class="description hidden">
+                    {{ job.description|raw }}
+                </div>
+            </div>
+                    
+            <a href="{{ job.url }}" class="btn-fulltime">{{ job.type }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+

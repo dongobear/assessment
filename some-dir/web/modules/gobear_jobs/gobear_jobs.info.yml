@@ -1,0 +1,6 @@
+name: Gobear Jobs
+description: Gobear Jobs
+package: Custom
+
+type: module
+core: 8.x

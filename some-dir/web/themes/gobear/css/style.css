@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'VarelaRound';
+  src: url(fonts/VarelaRound-Regular.ttf);
+}
+@font-face {
+  font-family: 'Rotobo';
+  src: url(fonts/Roboto-Regular.ttf);
+}
+hidden {
+  display: none;
+}
+body {
+  margin: 0px;
+}
+h1 {
+  margin: 0px;
+}
+.header,
+#block-gobear-page-title {
+  background-size: cover;
+  background-image: url('../images/banner.jpg');
+  height: 350px;
+  color: white;
+  font-size: 70px;
+  font-family: 'VarelaRound';
+  text-align: center;
+  line-height: 350px;
+}
+.container {
+  padding-left: 210px;
+  padding-right: 210px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.container .item-job {
+  padding: 40px 75px;
+  border: solid 1px #ececec;
+  font-family: 'VarelaRound';
+  position: relative;
+  margin-bottom: 45px;
+}
+.container .item-job h2 {
+  font-size: 35px;
+  margin: 0px;
+}
+.container .item-job .name {
+  font-family: 'Rotobo';
+  font-size: 25px;
+  color: #999999;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.container .item-job .name a {
+  text-decoration: none;
+  color: #7eacf6;
+}
+.container .item-job .information {
+  font-family: 'Rotobo';
+  font-size: 25px;
+}
+.container .item-job .information a {
+  text-decoration: none;
+  color: #7eacf6;
+}
+.container .item-job .btn-fulltime {
+  position: absolute;
+  top: 80px;
+  right: 70px;
+  color: white;
+  background: #6db141;
+  padding: 15px 50px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Rotobo';
+}
