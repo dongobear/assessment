@@ -1,0 +1,5 @@
+name: 'gobear_jobs'
+type: module
+description: 'gobear_jobs'
+core: 8.x
+package: 'Custom'
