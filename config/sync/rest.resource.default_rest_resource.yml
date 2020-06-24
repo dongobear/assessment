@@ -1,0 +1,18 @@
+uuid: d129cc33-6065-4918-b162-fa5d6bb6f169
+langcode: en
+status: true
+dependencies:
+  module:
+    - gobear_jobs
+    - serialization
+    - user
+id: default_rest_resource
+plugin_id: default_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie
