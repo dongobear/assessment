@@ -1,0 +1,22 @@
+uuid: 2ce0f43c-d1bb-451f-9843-a4706559b74f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gobear
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: gobear_help
+theme: gobear
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

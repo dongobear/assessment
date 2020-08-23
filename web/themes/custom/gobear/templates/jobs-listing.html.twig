@@ -1,0 +1,37 @@
+<div class="jobs-banner">
+    <div class="jobs-banner__heading">{{ 'Job Listing'|t }}</div>
+</div>
+<div class="jobs-listing">
+    {% for job in jobs %}
+    <div class="jobs-listing__item">
+        <div class="jobs-listing__item__content">
+            <h3 class="jobs-listing__item__title">{{ job.title }}</h3>
+            <div class="jobs-listing__item__meta">
+                <span><a href="{{ job.company_url }}">@{{ job.company }}</a></span>
+                <span>{{ job.location }}</span>
+            </div>
+            <div class="jobs-listing__item__meta">
+                <span>{{ 'Published'|t }} {{ job.created_at }}</span>
+                <span>{{ job.type }}</span>
+            </div>
+            <div>
+                <a role="button"
+                   data-toggle="collapse"
+                   href="#collapse-{{ job.id }}"
+                   aria-expanded="false"
+                   aria-controls="collapse-{{ job.id }}">
+                    {{ 'More info'|t }} >
+                </a>
+                <div class="collapse" id="collapse-{{ job.id }}">
+                    <div class="jobs-listing__description">
+                        {{ job.description }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jobs-listing__item__action">
+            <a href="{{ job.url }}" class="btn btn-success">{{ job.type }}</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

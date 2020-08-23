@@ -1,5 +1,7 @@
 framework:
   css:
+    base:
+      'https://fonts.googleapis.com/css?family=Roboto|Varela+Round': { external: true }
     theme:
       stylesheets/style.css: {}
   js:
