@@ -1,0 +1,5 @@
+name: GoBear Jobs
+type: module
+description: Provides a job listing page at url /jobs.
+package: GoBear
+core: 8.x

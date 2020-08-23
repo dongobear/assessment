@@ -1,0 +1,9 @@
+gobear_jobs:
+    path: /jobs
+    defaults:
+        _controller: Drupal\gobear_jobs\Controller\JobsController::index
+        _title: 'Jobs listing page'
+    requirements:
+        _permission: 'access content'
+    options:
+        no_cache: 'TRUE'
