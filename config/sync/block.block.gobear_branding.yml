@@ -1,0 +1,30 @@
+uuid: 8331aee0-0f87-4418-b017-8999bf723566
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gobear
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: gobear_branding
+theme: gobear
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility:
+  request_path:
+    id: request_path
+    pages: /jobs
+    negate: true
+    context_mapping: {  }

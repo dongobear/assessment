@@ -51,3 +51,5 @@ Vagrantfile
 /web/update.php
 /web/web.config
 
+
+web/themes/custom/gobear/.sass-cache/
